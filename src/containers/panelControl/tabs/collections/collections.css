@@ -1,0 +1,105 @@
+.collectionsHeaderWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.searchWrapper{
+    margin-left: auto;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.searchIcon{
+    width: 18px;
+    fill: var(--primary-color);
+}
+
+.searchWrapper input{
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    color: var(--color);
+    border-radius: 10px;
+}
+
+.searchWrapper input::-webkit-outer-spin-button, .searchWrapper
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.searchWrapper input::placeholder{
+    color: var(--primary-color);
+}
+.CollectionButtons{
+    border: none;
+    border-radius: 0;
+}
+.SelectedCollection{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.AlienCard{
+    width: min-content;
+    box-shadow: 6px 7px 20px rgb(0 0 0 / 22%);
+    cursor: pointer;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 13px;
+    transition: .6s;
+}
+
+.AlienCard:hover{
+    box-shadow: 6px 7px 20px var(--shadow-color);
+}
+.AlienCard img{
+    width: 300px;
+    height: 300px;
+}
+
+.AlienName{
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+}
+.AlienAdd{
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+    color: var(--primary-color);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: .6s;
+}
+.AlienCard:hover .AlienAdd{
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+.AlienWarning{
+    height: 346px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+@media (max-width: 1200px){
+    .searchWrapper{
+        /* margin-left: 0 !important; */
+        margin: 20px 10px !important;
+        width: 150px;
+    }
+
+    .CollectionButtons{
+        padding: 20px 10px !important;
+    }
+}

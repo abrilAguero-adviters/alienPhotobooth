@@ -1,0 +1,11 @@
+
+.footerLink{
+    font-family: 'FooterLinkFont';
+    line-height: 2em;
+    letter-spacing: normal;
+    font-weight: 700;
+}
+.footerLink span{
+    font-weight: normal;
+    font-weight: 200;
+}

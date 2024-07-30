@@ -1,0 +1,42 @@
+.tabHeader{
+    width: calc(100% + 1px);
+    height: 63px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.tabHeaderItem{
+    font-weight: 700;
+    font-size: 16px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    padding: 0px 20px;
+    cursor: pointer;
+    color: var(--bgTab);
+    background-color: transparent;
+}
+.tabHeaderItemActive{
+    color: var( --secondary-color);
+}
+
+div[disabled]
+{
+  cursor: not-allowed;
+}
+@media (max-width: 500px){
+    .tabHeader{
+        padding: 0 20px !important;
+        justify-content: space-between;
+    }
+
+    .tabHeaderItem{
+        padding: 0 !important;
+    }
+}

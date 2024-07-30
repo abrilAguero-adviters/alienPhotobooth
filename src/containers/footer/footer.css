@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'Oswald';
+        src: local('Oswald'),
+        url('./../../assets/fonts/oswald.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'FooterFont';
+        src: local('FooterFont'),
+        url('./../../assets/fonts/footerFont.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'FooterLinkFont';
+        src: local('FooterLinkFont'),
+        url('./../../assets/fonts/footerLinkFont.woff2') format('woff2');
+}
+[data-theme="light"]{
+    --footerBg: var(--main-orange);
+}
+[data-theme="dark"]{
+    --footerBg: transparent;
+}
+
+.footer{
+    font-family: 'FooterFont';
+    color: var(--color);
+    width: 100%;
+    background-color: var(--footerBg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 15px solid var(--main-green);
+    margin-top: 150px;
+    position: relative;
+
+}
+.footerBottom{
+    font-family: 'FooterLinkFont';
+    font-size: 14px;
+    background-color: rgb(0, 0, 0);
+    color: var(--main-green);
+    margin-top: 23px;
+    padding: 23px 0px 23px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+.footerBottom > div {
+    max-width: 90%;
+}
+.footerBottom > div > a{
+    color: var(--main-green);
+    text-decoration: none; /* no underline */
+
+}
+.footerCContent{
+    font-size: 14px;
+}
+.footerCContent div > a{
+    color: var(--color);
+    text-decoration: none; /* no underline */
+
+}
+.footerMedia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footerMedia img{
+    height: 30px;
+    margin: 0 10px 0 0;
+}
+
+.footerButtons{
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 10px 5px; 
+    grid-template-areas: 
+        "btn1 btn1"
+        "btn2 btn3"
+        "btn4 btn4"; 
+
+}
+.btn1 { grid-area: btn1; }
+.btn2 { grid-area: btn2; }
+.btn3 { grid-area: btn3; }
+.btn4 { grid-area: btn4; }
+
+
+@-webkit-keyframes myAnim {
+0% {
+    transform: translate(200%,-100%);
+}
+
+100% {
+    transform: translate(50%, 50%);
+}
+}
+@keyframes myAnim {
+0% {
+    transform: translate(200%,-100%);
+}
+
+100% {
+    transform: translate(50%, 50%);
+    }
+}
+
+.CustomHyperLinkFooter{
+    color: var(--color);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px
+}
+
+.CustomHyperLinkFooter svg{
+    height: 25px;
+    fill: var(--color);
+}
+
+/* [data-theme="dark"] .CustomHyperLinkFooter svg{
+    fill: var(--soft-gray);
+} */
+
+@media only screen and (max-width: 850px) {
+
+    .footerContainer {
+        width: 95%;
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1.3fr 0.8fr 1.2fr; 
+        gap: 10px 10px; 
+        grid-template-areas: 
+            "i1 i1"
+            "i2 i3"
+            "i2 i4"; 
+    }
+
+    .CustomHyperLinkFooter{
+        margin: 2px
+    }
+  }
+@media only screen and (min-width: 851px) {
+    .footerContainer{
+        height: 430px;
+        width: 90%;
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        /* grid-template-columns: 3fr 2fr 2fr 2fr;  */
+        grid-template-columns: 4fr 2fr 2fr;
+        grid-template-rows: 2fr; 
+        gap: 0px 0px; 
+        /* grid-template-areas: 
+            "i1 i2 i3 i4";  */
+        grid-template-areas: 
+            "i1 i2 i3"; 
+        align-items: stretch; 
+    }
+    .footerCContent{
+        font-size: 16px;
+        flex-direction: column;
+        display: flex;
+        align-items: flex-end;
+    }
+    .footerCContent div{
+        width: 220px;
+    }
+    .footerCTitle{
+        flex-direction: column;
+        display: flex;
+        align-items: flex-end;
+    
+    }
+    .footerCTitle div{
+        margin-top: 41px;
+        margin-bottom: 23px;
+        width: 220px;
+        
+    }
+    .footerButtons div{
+        width: auto;
+        height: 35px;
+    }
+    
+}
+.i1 { grid-area: i1; }
+.i2 { grid-area: i2; }
+.i3 { grid-area: i3; }
+.i4 { grid-area: i4; }

@@ -1,0 +1,45 @@
+canvas{
+    border: 2px solid var(--primary-color);
+}
+
+.ConnectYourWallet{
+    background-image: url("../../assets/img/control/connectYourWallet.png");
+    border: 2px solid var(--primary-color);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+}
+
+.canvas-container, .lower-canvas, .upper-canvas, canvas, .ConnectYourWallet {
+    height: 500px;
+    width: 1500px;
+}
+.canvasLayerContainer{
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 1500px) and (min-width: 1201px){
+    .canvas-container, .lower-canvas, .upper-canvas, canvas, .ConnectYourWallet {
+      width: calc(100vw - 0px) !important;
+      height: calc((100vw - 20px) / 3)!important;
+    }
+    .ConnectYourWallet{
+        background-size: contain;
+        padding: 15px;
+        background-origin: content-box;
+    }
+}
+  
+@media (max-width: 1200px){
+    .canvas-container, .lower-canvas, .upper-canvas, canvas, .ConnectYourWallet {
+      width: calc(100vw - 20px) !important;
+      height: calc((100vw - 20px) / 3)!important;
+    }
+    .ConnectYourWallet{
+        background-size: contain;
+        padding: 15px;
+        background-origin: content-box;
+    }
+}

@@ -1,0 +1,29 @@
+.TextboxInputWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.TextboxInputWrapper input[type="number"]{
+    border: 2px solid var(--settingsColor);
+    outline: none;
+    width: 40px;
+    height: 16px;
+    border-radius: 3px;
+    background: none;
+    margin-bottom: 5px;
+    -moz-appearance: textfield;
+}
+
+@media (max-width: 1110px){
+    .TextboxInputWrapper  input[type="number"]{
+        width: 70px;
+        height: 25px;
+        font-size:18px !important;
+    }
+}
+.TextboxInputWrapper input[type="number"]::-webkit-outer-spin-button,
+.TextboxInputWrapper input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,46 @@
+.footerStarsContainer{
+    position: absolute; left:0; top:0; width: 100%; height: 0;
+}
+.footerStars{
+    position: absolute;
+    left: 150px; top: -140px;
+    width: 90px;
+}
+.footerStars2{
+    position: absolute;
+    left: 270px; top: -50px;
+    width: 57px;
+}
+.footerStars3{
+    position: absolute;
+    left: 300px; top: -114px;
+    width: 35px;
+}
+.footerStarsAlien{
+    position: absolute;
+    top: -80px;
+    right: 0;
+    width: 94px;
+    transform: translateX(-50%) rotate(20deg);
+}
+.footerStarsContainer div img {
+    width:100%;
+}
+
+@media only screen and (max-width: 850px) {
+    .footerStars{
+        width: 44px;
+        left: 50px; top: -130px;
+    }
+    .footerStars2{
+        width: 28px;
+        left: 90px; top: -50px;
+    }
+    .footerStars3{
+        width: 20px;
+        left: 120px; top: -100px;
+    }
+    .footerStarsAlien{
+        width: 65px;
+    }
+}

@@ -1,0 +1,30 @@
+
+[data-theme="light"]{
+    --footerButtonColor: var(--main-orange);
+    --footerButtonHover: var(--main-violet);
+}
+[data-theme="dark"]{
+    --footerButtonColor: var(--main-black);
+    --footerButtonHover: var(--main-green);
+}
+.footerButton{
+    font-family: 'Oswald';
+    
+    background-color: var(--color);
+    border: 2px solid black;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--footerButtonColor);
+}
+.footerButton:hover{
+    background-color: var(--footerButtonHover);
+}
+.footerButtonLink{
+    text-decoration: none; /* no underline */
+}

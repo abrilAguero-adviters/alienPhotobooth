@@ -1,0 +1,56 @@
+.connectWalletWrapper{
+    position: relative;
+    margin-right: 15px;
+}
+.connectWallet{
+    background-color: var(--bg);
+    border: 2px solid var(--main-violet);
+    color: var(--main-violet);
+    padding: 15px 30px;
+    border-radius: 5px;
+    margin: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+}
+[data-theme="dark"] .connectWallet{
+        border: 2px solid var(--main-green);
+        color: var(--main-green);
+}
+.connectWalletIndicator{
+    height: 15px;
+    width: 15px;
+    top: -3px;
+    background: #74FB4D;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.connectWalletIndicatorOff{
+    background: var(--main-red);
+
+}
+
+.EthAlert{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: orange;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 12;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.EthAlertOpen {
+    height: 40px;
+}
+
+.EthAlert div{
+    cursor: pointer;
+}

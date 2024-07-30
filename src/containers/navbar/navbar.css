@@ -1,0 +1,85 @@
+[data-theme="light"] .fil0{
+    fill: var(--main-violet) !important
+}
+.navbar{
+    /* border-bottom: 1px solid var(--dark-gray); */
+    padding: 15px 80px;
+}
+.logo{
+    height: 120px;
+    cursor: pointer;
+}
+
+.navbar > div{
+    max-width: 1500px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.rightNavbar{
+    max-width: 700px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socialMediaWrapper{
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.socialMediaWrapper img{
+    height: 40px;
+}
+
+.darkModeWalletWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.themeColorButton{
+    height: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 1s;
+    user-select: none;
+    margin-right: 20px;
+}
+
+.rotateMoon{
+    transform: rotate(186deg);
+}
+
+@media (max-width: 900px){
+    .navbar > div{
+       justify-content: space-between;
+    }
+    .socialMediaWrapper{
+        display: none;
+    }
+
+    .navbar{
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .logo{ 
+        height: 50px;
+    }
+
+    .themeColorButton{
+        margin: 5px;
+        margin-right: 20px;
+    }
+
+    .rightNavbar{
+        width: auto;
+    }
+
+    .connectWallet{
+        padding: 10px;
+    }
+}

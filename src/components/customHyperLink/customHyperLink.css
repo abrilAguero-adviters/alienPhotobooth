@@ -1,0 +1,15 @@
+.CustomHyperLink{
+    color: var(--main-violet);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px
+}
+
+.CustomHyperLink svg{
+    height: 25px;
+    fill: var(--main-violet);
+}
+
+[data-theme="dark"] .CustomHyperLink svg{
+    fill: var(--soft-gray);
+}

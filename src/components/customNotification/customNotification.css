@@ -1,0 +1,72 @@
+.notification{
+    z-index: 100;
+    cursor: default;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    align-items: center;
+    padding: 15px 25px 15px 25px;
+    border-radius: 8px;
+    right: 10px;
+    bottom: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 6px 7px 1px var(--shadow-notification);
+    animation: notifAnim 1s ease 0s 1 normal forwards,
+        notifDefuse 3s ease 0s 1 normal forwards;
+}
+.notification:hover{
+    box-shadow: 6px 7px 1px var(--shadow-notification);
+    border: 0.5px solid var(--main-black);
+}
+@media only screen and (max-width: 850px) {
+    .notification{
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: fit-content;
+    }
+  }
+@-webkit-keyframes notifAnim {
+    0% {
+        transform: translate(200%,-100%);
+    }
+    
+    100% {
+        transform: translate(-50%, -50%);
+    }
+    }
+    @keyframes notifAnim {
+    0% {
+        transform: translate(200%,-100%);
+    }
+    
+    100% {
+        transform: translate(-50%, -50%);
+        }
+    }
+@-webkit-keyframes notifDefuse {
+    0% {
+        transform: opacity
+    }
+    
+    100% {
+        transform: translate(-50%, -50%);
+    }
+    }
+    @keyframes notifDefuse {
+        0% {
+            opacity: 1;
+        }
+    
+        50% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+        

@@ -1,0 +1,38 @@
+.ImagesContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 20px;
+}
+
+.backgroundContainer{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.imageButton{
+    cursor: pointer;
+}
+.imageButton img{
+    border-radius: 20px;
+    width: 100%;
+}
+[data-theme="dark"]{
+    --bgTab: transparent;
+  }
+  [data-theme="light"]{
+    --bgTab: var(--main-white);
+  }
+.tabsWrapper{
+    border: 2px solid var(--primary-color);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+    background-color: var(--bgTab);
+}
+
+.tabsWrapper > div:nth-child(2){
+padding: 30px;
+}
+

@@ -1,0 +1,67 @@
+.RangeInputWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.RangeInputWrapper span{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+input[type=range] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    background-color: transparent;
+    
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+width: 100%;
+height: 4px;
+background:  var(--settingsColor);
+border-radius: 50px;
+outline: transparent;
+box-shadow: transparent;
+border: 0px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+height: 15px;
+width: 15px;
+border-radius: 50px;
+background:  var(--settingsColor);
+-webkit-appearance: none;
+margin-top: -6px;
+}
+
+
+
+.RangeInputWrapper input[type="number"]{
+    border: 2px solid var(--settingsColor);
+    outline: none;
+    width: 40px;
+    height: 16px;
+    border-radius: 3px;
+    background: none;
+    margin-bottom: 5px;
+    -moz-appearance: textfield;
+}
+
+.RangeInputWrapper input[type="number"]::-webkit-outer-spin-button,
+.RangeInputWrapper input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media (max-width: 1110px){
+    .RangeInputWrapper  input[type="number"]{
+        width: 70px;
+        height: 25px;
+        font-size:18px !important;
+    }
+
+    input[type=range] {
+        width: 50%;
+    }
+}

@@ -1,0 +1,202 @@
+.editWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 1px;
+}
+
+.editWrapper > *:first-child {
+    border-left: 2px solid var(--dark-gray);
+    border-top-left-radius: 15px;
+}
+
+.editWrapper button:nth-child(13) {
+    border-top-right-radius: 15px;
+}
+
+.editWrapper button:nth-child(14) {
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.toolsWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.toolBtn{
+    background-color: var(--soft-gray);
+    border: 1px solid var(--dark-gray);
+    padding: 5px;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    border-radius: 0px;
+    margin: 0;
+    margin-bottom: -1px;
+    margin-left: -1px;
+}
+
+[data-theme="dark"][data-disabled="false"] .toolBtn{
+    background-color: var(--main-green);
+}
+
+.canvasActionsWrapper{
+    display: flex;
+}
+
+.canvasActionBtn{
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 15px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.canvasActionBtn:disabled{
+    filter: grayscale(1);
+}
+
+[data-theme="light"]{
+    --settingsBg: rgba(239, 239, 239, 0.7);
+    --settingsBgResponsive: rgba(239, 239, 239, 1);
+    --settingsColor: var(--main-violet);
+  }
+  
+  [data-theme="dark"]{
+    --settingsBg: rgba(153, 255, 153, 0.7);
+    --settingsBgResponsive: rgba(153, 255, 153, 1);
+    --settingsColor: black;
+  }  
+.controlsHead button{
+    display: none;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    color: var(--settingsColor);
+}
+.settingsWrapper {
+    background: var(--settingsBg);
+    color: var(--settingsColor);
+    position: absolute;
+    overflow: hidden; 
+    top: 44px;
+    left: 2px;
+    width: 0px;
+    height: 0;
+    transition: .3s ease;
+}
+
+.show {
+    border: 1px solid var(--dark-gray);
+    border-left: 0;
+    height: 497px;
+    width:250px;
+}
+
+
+.specialButton{
+    width: 22px;
+    height: 22px;
+    fill: var(--primary-color);
+}
+
+.canvasActionBtn span{
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 850px){
+    .editWrapper *:first-child {
+        border-top-left-radius: 0;
+    }
+    
+    .editWrapper button:nth-child(13) {
+        border-top-right-radius: 0;
+    }
+
+    .editWrapper button:nth-child(14){
+        margin-left: 0px !important;
+        margin-right: 0px;
+    }
+    .canvasActionBtn{
+        height: 45px;
+        width: 45px;
+        margin: 0px;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+    }
+}
+  
+@media (max-width: 1500px){
+    .settingsWrapper  {
+      height: calc((100vw - 20px) / 3 - 3px)!important;
+    }
+}
+
+@media (max-width: 1110px){
+    .settingsWrapper  {
+        height: 100vh !important;
+      z-index: 100;
+      background-color: var(--settingsBgResponsive);
+      position: fixed;
+      overflow-y: auto;
+      top: 0;
+
+    }
+    .settingsWrapper > div {
+        padding: 30px;
+    }
+
+    .tabControls{
+        padding-top: 0 !important;
+    }
+    .show{
+        width: 100vw !important;
+    }
+    .controlsHead{
+        font-size: 30px !important;
+        font-weight: 300 !important;
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    .controlsHead button{
+        position: absolute;
+        display: block;
+        top: 12px;
+        right: 20px;
+    }
+
+
+    .tabControlsTitle{
+        font-size: 25px !important;
+    }
+    .tabControls > div {
+        padding: 30px 0 !important;
+        font-size: 18px !important;
+        font-weight: 300 !important;
+    }
+
+    .tabControlsItem  > * {
+        margin-top: 5px;
+    }
+
+    .show{
+        border: none;
+    }
+
+    .toolsWrapper {
+      position: initial;
+    }
+}
+  
+  
